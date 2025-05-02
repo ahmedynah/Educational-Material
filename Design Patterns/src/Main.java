@@ -30,11 +30,10 @@ public class Main {
         dialog.show();
 
         // Adapter
-        AudioPlayer player = new AudioPlayer();
-        player.play("mp3", "song.mp3");
-        player.play("mp4", "movie.mp4");
-        player.play("vlc", "music.vlc");
-        player.play("avi", "trailer.avi");
+        OldPrinter oldPrinter = new OldPrinter();
+        Printer adapter = new PrinterAdapter(oldPrinter);
+
+        adapter.print("Hello, Adapter Pattern!");
 
         // Observer
         NewsAgency agency = new NewsAgency();
