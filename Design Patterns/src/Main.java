@@ -16,6 +16,13 @@ public class Main {
 
         System.out.println(s1 == s2); // true, both are same instance
 
+        // Simple Factory
+        Coffee coffee1 = CoffeeFactory.getCoffee("espresso");
+        coffee1.prepare();  // Output: Preparing a strong Espresso.
+
+        Coffee coffee2 = CoffeeFactory.getCoffee("cappuccino");
+        coffee2.prepare();  // Output: Preparing a creamy Cappuccino.
+
         // Factory Method
         Dialog dialog;
 
