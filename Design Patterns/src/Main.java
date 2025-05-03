@@ -39,8 +39,16 @@ public class Main {
         // Adapter
         OldPrinter oldPrinter = new OldPrinter();
         Printer adapter = new PrinterAdapter(oldPrinter);
-
         adapter.print("Hello, Adapter Pattern!");
+
+        List<Printer> list = new List<Printer>();
+        list.add(new PrinterHPNew());
+        list.add(new PrinterDellNew());
+        list.add(new PrinterAdapter(new OldPrinter()));
+
+        for(Printer p: lsit){
+            p.print();
+        }
 
         // Observer
         NewsAgency agency = new NewsAgency();
